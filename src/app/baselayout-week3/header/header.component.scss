@@ -1,0 +1,34 @@
+// @import '../../../themes/theme';
+// @import '../../../themes/mixins';
+
+// .navbar-custom {
+//     @include background-text;
+//     font-size: 20px;
+//     a {
+//         color: $primary-color !important;
+//     }
+// }
+
+// .navbar-custom .dropdown-item {
+//     &:hover {
+//         @include background-text($primary-bg-color, $primary-color)
+//     }
+// }
+
+// .custom-toggler {
+//     border-color: $primary-color !important;
+// }
+
+.dark-light {
+    font-size: 22px;
+}
+.navbar-custom {
+    font-size: 20px;
+}
+
+// @import '../../../themes/variables.scss';
+
+// .navbar-custom {
+//     @include theme(background-color, primary-bg-color);
+//     @include theme(color, primary-color);
+// }

@@ -1,0 +1,13 @@
+@import './custom/generateTheme';
+
+$font-family: 'Lato', sans-serif;
+
+/** this section generates a theme map for each theme **/
+$themes: ();
+$themeValues: ();
+
+@import './custom/light.scss';
+@include generateThemeMappings(light, $light);
+
+@import './custom/dark.scss';
+@include generateThemeMappings(dark, $dark);

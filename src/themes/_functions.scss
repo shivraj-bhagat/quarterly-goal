@@ -1,0 +1,19 @@
+@import './color';
+
+// color mapping
+@function color($colorName) {
+    @return map-get($color, $colorName);
+}
+
+// to check if theme exists
+@function themeExists($key, $theme) {
+    @if map-has-key($themeValues, $key) {
+      @return map-has-key(map-get($themeValues, $key), $theme);
+    }
+    @return null;
+}
+
+// to get theme color
+@function getThemeValue($key, $theme) {
+    @return map-get(map-get($themeValues, $key), $theme);
+}

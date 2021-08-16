@@ -1,0 +1,6 @@
+@import './variables';
+
+@mixin background-text($color: $primary-color, $background: $primary-bg-color) {
+  color: $color !important;
+  background-color: $background !important;
+}

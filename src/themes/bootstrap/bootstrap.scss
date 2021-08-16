@@ -1,0 +1,17 @@
+@import '../functions';
+
+$theme-colors: (
+    "primary":    color(prestige-blue),
+    "secondary":  color(off-black),
+    "success":    #28a745,
+    "info":       #17a2b8,
+    "warning":    #ffc107,
+    "danger":     #dc3545,
+    "light":      color(off-white),
+    "dark":       color(off-black)
+);
+
+// $body-bg: color(grisaille);
+// $body-color: color(off-white);
+
+@import '~bootstrap/scss/bootstrap';

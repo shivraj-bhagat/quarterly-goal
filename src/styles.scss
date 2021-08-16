@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Importing Bootstrap SCSS file. */
+@import './themes/bootstrap/bootstrap';
+@import '~bootstrap/scss/bootstrap';
+@import './themes/material/material';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@import './themes/variables.scss';
+// @import './themes/mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @include generateThemeVariables;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-family;
+    @include theme(background-color, body-color);
+    @include theme(color, text-color);
+}
+
+.navbar-custom {
+    @include theme(background-color, primary-bg-color);
+    @include theme(color, primary-color);
+
+    a {
+        @include theme(color, primary-color);
+    }
+}
+
+.navbar-custom .dropdown-item {
+    &:hover {
+        @include theme(color, primary-bg-color);
+        @include theme(background-color, primary-color);
+    }
+}
+
+.footer {
+    @include theme(background-color, primary-bg-color);
+    @include theme(color, primary-color);
+}
