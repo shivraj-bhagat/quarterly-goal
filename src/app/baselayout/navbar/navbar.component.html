@@ -1,0 +1,30 @@
+<div class="custom-navbar">
+    <div class="navbar-left">
+        <div class="custom-navbar-brand">
+            <img src="../../../assets/img/logo.svg" alt="brand-logo">
+        </div>
+        <button type="button" class="btn btn-link custom-style" (click)="toggle()"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="navbar-content">
+        <div class="search-box">
+            <input type="text" class="form-control form-custom-input" placeholder="Search">
+        </div>
+        <div class="action-section action-border-left">
+            <i class="far fa-bell"></i>
+            <i class="fas fa-sliders-h"></i>
+        </div>
+        <div class="profile-section">
+            <img src="../../../assets/img/profile.jpeg" alt="profile image" />
+            <span>Shiv Raj Bhagat</span>
+            <!-- <i class="fas fa-chevron-down"></i> -->
+            <div ngbDropdown class="d-inline-block">
+                <span class="fas fa-chevron-down custom-arrow" id="dropdownBasic2" ngbDropdownToggle></span>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2" class="custom-dropdown-box
+                ">
+                  <button ngbDropdownItem>Account</button>
+                  <button ngbDropdownItem>Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

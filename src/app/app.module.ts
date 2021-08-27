@@ -7,9 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material-module';
+import { NavbarComponent } from './baselayout/navbar/navbar.component';
+import { SidebarComponent } from './baselayout/sidebar/sidebar.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, NavbarComponent, SidebarComponent, HomeComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
