@@ -9,9 +9,12 @@ import { GlobalVariablesService } from 'src/app/services/global-variables.servic
 })
 export class SidebarComponent implements OnInit {
 
-    @ViewChild('drawer') drawer: MatDrawer ;
-    constructor() {}
+    isSideBarVisible: boolean = false;
+    constructor(private globalVariable: GlobalVariablesService) {}
 
     ngOnInit(): void {
+        this.globalVariable.sideBarVisibility.subscribe(data=>{
+            this.isSideBarVisible = data
+        })
     }
 }

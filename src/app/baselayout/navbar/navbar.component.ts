@@ -8,11 +8,17 @@ import { GlobalVariablesService } from 'src/app/services/global-variables.servic
 })
 export class NavbarComponent implements OnInit {
 
-    constructor(private globalVaribale: GlobalVariablesService) {}
+    sideBarStatus: boolean = false;
+    constructor(private globalVariable: GlobalVariablesService) {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.globalVariable.sideBarVisibility.subscribe(data => {
+            this.sideBarStatus = data
+        })
+    }
 
     toggle() {
-        this.globalVaribale.setSidebar(true);
+        this.sideBarStatus = !this.sideBarStatus
+        this.globalVariable.sideBarVisibility.next(this.sideBarStatus)
     }
 }

@@ -8,13 +8,13 @@ import { GlobalVariablesService } from './services/global-variables.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    @ViewChild(SidebarComponent) sidebar: SidebarComponent;
+    // @ViewChild(SidebarComponent) sidebar: SidebarComponent;
     constructor(private globalVariable: GlobalVariablesService) {
-        this.globalVariable.sidebar.subscribe(value => {
-            if(value == true) {
-                this.sidebar.drawer.toggle();
-                console.log(this.sidebar)
-            }
-        })
+        // this.globalVariable.sidebar.subscribe(value => {
+        //     if(value == true) {
+        //         this.sidebar.drawer.toggle();
+        //         console.log(this.sidebar)
+        //     }
+        // })
     }
 }

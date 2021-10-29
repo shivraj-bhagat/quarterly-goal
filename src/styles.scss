@@ -2,6 +2,7 @@
 
 
 /* Importing Bootstrap SCSS file. */
+
 @import './themes/bootstrap/bootstrap';
 @import '~bootstrap/scss/bootstrap';
 @import './themes/material/material';
@@ -9,10 +10,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
 @import './themes/variables.scss';
 // @import './themes/mixins';
-
 * {
     padding: 0;
     margin: 0;
@@ -30,27 +29,69 @@ body {
 
 body {
     font-family: $font-family;
-    @include theme(background-color, body-color);
-    @include theme(color, text-color);
+    @include theme(background-color,
+    body-color);
+    @include theme(color,
+    text-color);
 }
 
 .navbar-custom {
-    @include theme(background-color, primary-bg-color);
-    @include theme(color, primary-color);
-
+    @include theme(background-color,
+    primary-bg-color);
+    @include theme(color,
+    primary-color);
     a {
-        @include theme(color, primary-color);
+        @include theme(color,
+        primary-color);
     }
 }
 
 .navbar-custom .dropdown-item {
     &:hover {
-        @include theme(color, primary-bg-color);
-        @include theme(background-color, primary-color);
+        @include theme(color,
+        primary-bg-color);
+        @include theme(background-color,
+        primary-color);
     }
 }
 
 .footer {
-    @include theme(background-color, primary-bg-color);
-    @include theme(color, primary-color);
+    @include theme(background-color,
+    primary-bg-color);
+    @include theme(color,
+    primary-color);
+}
+
+body[layout="second"]  {
+    .navbar-section {
+        position: relative;
+        z-index: 1;
+    }
+
+    .sidebar {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.sidebar {
+    &-show {
+        width: 230px;
+        transition: all 1s ease;
+        visibility: visible;
+    }
+    &-hide {
+        transition: all 1s ease-out;
+        animation-name: fadeOut;
+        animation-duration: 1s;
+        width: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeOut {
+    0%   {opacity: 0.85;}
+    25%  {opacity: 0.65;}
+    50%  {opacity: 0.45;}
+    100% {opacity: 0.25;}
 }
