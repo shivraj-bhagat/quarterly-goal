@@ -1,0 +1,47 @@
+[layout="first"] .sidebar, [layout="second"] .sidebar {
+    position: absolute;
+    z-index: 10;
+}
+
+[layout="first"] .homepage-container, [layout="second"] .homepage-container {
+    position: absolute;
+    z-index: 10;
+}
+
+[sidebar-status="hidden"] .sidebar {
+    width: 0%;
+    visibility: hidden;
+}
+
+[sidebar-status="hidden"] .homepage-container {
+    width: 100%;
+}
+
+[sidebar-status="shown"][layout="first"] .sidebar {
+    width: 15%;
+    visibility: visible;
+}
+
+[sidebar-status="shown"][layout="first"] .homepage-container {
+    left: 15%;
+    width: 85%;
+}
+
+[sidebar-status="shown"][layout="second"] .sidebar {
+    width: 15%;
+    visibility: visible;
+}
+
+[sidebar-status="shown"][layout="second"] .homepage-container {
+    left: 15%;
+    top: 10%;
+    width: 85%;
+    height: 90%;
+}
+
+[sidebar-status="shown"][layout="second"] .custom-navbar {
+    position: absolute;
+    z-index: 10;
+    left: 15%;
+    width: 85%;
+}

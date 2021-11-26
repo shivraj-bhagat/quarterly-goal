@@ -1,0 +1,25 @@
+[layout="first"] .sidebar, [layout="second"] .sidebar {
+    height: 100%;
+    background-color: red;
+}
+
+.sidebar {
+    &-show {
+        transition: all 1s ease;
+        visibility: visible;
+    }
+    &-hide {
+        transition: all 1s ease-out;
+        animation-name: fadeOut;
+        animation-duration: 1s;
+        width: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeOut {
+    0%   {opacity: 0.85;}
+    25%  {opacity: 0.65;}
+    50%  {opacity: 0.45;}
+    100% {opacity: 0.25;}
+}

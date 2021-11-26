@@ -12,6 +12,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import './themes/variables.scss';
 // @import './themes/mixins';
+
+@import url("./styles/header/header.scss");
+@import url("./styles/optionbar/optionbar.scss");
+@import url("./styles/sidebar/sidebar.scss");
+@import url("./styles/homepage/homepage.scss");
+
 * {
     padding: 0;
     margin: 0;
@@ -60,38 +66,4 @@ body {
     primary-bg-color);
     @include theme(color,
     primary-color);
-}
-
-body[layout="second"]  {
-    .navbar-section {
-        position: relative;
-        z-index: 1;
-    }
-
-    .sidebar {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-.sidebar {
-    &-show {
-        width: 230px;
-        transition: all 1s ease;
-        visibility: visible;
-    }
-    &-hide {
-        transition: all 1s ease-out;
-        animation-name: fadeOut;
-        animation-duration: 1s;
-        width: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes fadeOut {
-    0%   {opacity: 0.85;}
-    25%  {opacity: 0.65;}
-    50%  {opacity: 0.45;}
-    100% {opacity: 0.25;}
 }
