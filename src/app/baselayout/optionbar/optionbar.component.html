@@ -1,0 +1,23 @@
+<div class="optionbar-container">
+    <div class="layover-section"></div>
+    <div class="option-section">
+        <i class="fas fa-times cross-icon" (click)="OptionToggle()" style="cursor: pointer;"></i>
+        <div class="page-container p-4 row">
+            <div class="top-section col-sm-12">
+                <h4>Make Fully your own</h4>
+                <p>Change the app layout and color palette with a simple click.</p>
+                <img src="../../../assets/img/settings-illustration.svg" alt="" class="img-fluid">
+            </div>
+            <div class="layout-selection-section col-sm-12 py-4 d-flex flex-column">
+                <h4>Choose the Layout</h4>
+                <mat-radio-group [(ngModel)]="selectedLayout" class="row">
+                    <mat-radio-button *ngFor="let layout of layouts" [value]="layout.name" class="col-md-6 py-2 layout-radio-button">
+                        <div class="title">{{layout.title}}</div>
+                        <img src="{{layout.image}}" alt="{{layout.title}}" class="layout-img" class="img-fluid mt-2">
+                    </mat-radio-button>
+                </mat-radio-group>
+                <button type="button" class="btn btn-blue btn-custom" (click)="previewLayout()">Preview</button>
+            </div>
+        </div>
+    </div>
+</div>

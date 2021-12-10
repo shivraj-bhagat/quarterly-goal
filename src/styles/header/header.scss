@@ -1,3 +1,93 @@
-[layout="second"][sidebar-status="shown"] .action-section {
+[layout="second"][sidebar-status="shown"] .action-section,
+[layout="third"][sidebar-status="shown"] .action-section {
     margin-left: 210px !important;
+}
+
+[sidebar-status="shown"][layout="second"] .custom-navbar,
+[sidebar-status="shown"][layout="third"] .custom-navbar {
+    position: absolute;
+    z-index: 10;
+    left: 15%;
+    width: 85%;
+}
+
+[layout="third"] .custom-navbar,
+[layout="third"] .form-custom-input {
+    color: white;
+    background-color: var(--theme-dark-background-layout);
+}
+
+[layout="third"] .form-custom-input {
+    border-bottom: 1px solid white !important;
+}
+
+[layout="third"] .form-custom-input:focus {
+    background-color: inherit !important;
+    box-shadow:  none !important;
+    color: white;
+}
+
+[layout="third"] .form-custom-input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+[layout="third"] .form-custom-input:-ms-input-placeholder {
+    color: white;
+}
+
+[layout="third"] .form-custom-input::-ms-input-placeholder {
+    color: white;
+}
+
+.fourth-logo, [layout="fourth"] .logo ,
+[layout="fourth"] .profile-section > span,
+[layout="fourth"] .custom-arrow {
+    display: none;
+}
+
+[layout="fourth"] .profile-section {
+    margin: 0 !important;
+    grid-column-gap: 0px !important;
+    column-gap: 0px !important;
+}
+
+[layout="fourth"] .fourth-logo {
+    display: block;
+}
+
+[layout="fourth"] .custom-navbar {
+    position: absolute;
+    z-index: 11;
+    width: 5%;
+    height: 100%;
+    flex-direction: column;
+    background-color: var(--theme-dark-background-layout);
+}
+
+[layout="fourth"] .btn.custom-style,
+[layout="fourth"] .search-box,
+[layout="fourth"] .profile-img,
+.fa-search,
+.dropdown-img {
+    display: none !important;
+}
+
+[layout="fourth"] .dropdown-img, [layout="fourth"] .fa-search {
+    display: block !important;
+}
+
+[layout="fourth"] .dropdownCustom {
+    margin-top: 250px;
+}
+
+[layout="fourth"] .navbar-content {
+    flex-direction: column !important;
+    margin-top: 230px;
+}
+
+[layout="fourth"] .action-border-left {
+    flex-direction: column-reverse !important;
+    row-gap: 35px;
+    color: white;
 }

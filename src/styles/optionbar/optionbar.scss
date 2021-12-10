@@ -1,0 +1,46 @@
+[optionbar-status="hidden"] .layover-section,
+[optionbar-status="hidden"] .option-section {
+    display: none;
+}
+
+[optionbar-status="shown"] .layover-section,
+[optionbar-status="shown"] .option-section {
+    display: block;
+    position: absolute;
+    z-index: 15;
+    height: 100%;
+}
+
+[optionbar-status="shown"] .option-section {
+    overflow-y: scroll;
+}
+
+.layover-section {
+    background-color: rgba(0,0,0,0.3);
+}
+
+[optionbar-status="shown"][layout="first"] .layover-section,
+[optionbar-status="shown"][layout="second"] .layover-section,
+[optionbar-status="shown"][layout="third"] .layover-section,
+[optionbar-status="shown"][layout="fourth"] .layover-section {
+    width: 70%;
+}
+
+[optionbar-status="shown"][layout="fourth"] .layover-section {
+    left: 30%;
+}
+
+.option-section {
+    background-color: var(--light);
+}
+
+[optionbar-status="shown"][layout="first"] .option-section,
+[optionbar-status="shown"][layout="second"] .option-section,
+[optionbar-status="shown"][layout="third"] .option-section {
+    left: 70%;
+    width: 30%;
+}
+
+[optionbar-status="shown"][layout="fourth"] .option-section {
+    width: 30%;
+}

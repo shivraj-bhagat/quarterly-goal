@@ -1,7 +1,8 @@
 <div class="custom-navbar">
     <div class="navbar-left">
         <div class="custom-navbar-brand">
-            <img src="../../../assets/img/logo.svg" alt="brand-logo">
+            <img src="../../../assets/img/logo.svg" alt="brand-logo" class="logo">
+            <img src="../../../assets/img/logo-grey-background.svg" alt="brand-logo" class="fourth-logo">
         </div>
         <button type="button" class="btn btn-link custom-style" (click)="toggle()"><i class="fa fa-bars"></i></button>
     </div>
@@ -10,15 +11,17 @@
             <input type="text" class="form-control form-custom-input" placeholder="Search">
         </div>
         <div class="action-section action-border-left">
+            <i class="fas fa-search"></i>
             <i class="far fa-bell"></i>
-            <i class="fas fa-sliders-h" (click)="toggleLayout()" style="cursor: pointer;"></i>
+            <i class="fas fa-sliders-h" (click)="OptionToggle()" style="cursor: pointer;"></i>
         </div>
         <div class="profile-section">
-            <img src="../../../assets/img/profile.jpeg" alt="profile image" />
+            <img src="../../../assets/img/profile.jpeg" alt="profile image" class="profile-img" />
             <span>Shiv Raj Bhagat</span>
             <!-- <i class="fas fa-chevron-down"></i> -->
-            <div ngbDropdown class="d-inline-block">
+            <div ngbDropdown class="d-inline-block dropdownCustom">
                 <span class="fas fa-chevron-down custom-arrow" id="dropdownBasic2" ngbDropdownToggle></span>
+                <img src="../../../assets/img/profile.jpeg" alt="profile image" class="dropdown-img" id="dropdownBasic2" ngbDropdownToggle/>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic2" class="custom-dropdown-box
                 ">
                   <button ngbDropdownItem>Account</button>

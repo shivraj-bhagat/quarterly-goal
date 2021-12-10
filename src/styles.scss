@@ -67,3 +67,7 @@ body {
     @include theme(color,
     primary-color);
 }
+
+.layout-radio-button .mat-radio-label {
+    align-items: flex-start !important;
+}

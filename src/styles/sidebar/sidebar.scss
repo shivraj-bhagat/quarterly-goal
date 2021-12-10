@@ -1,6 +1,76 @@
 [layout="first"] .sidebar, [layout="second"] .sidebar {
     height: 100%;
-    background-color: red;
+    background-color: var(--theme-dark-background-layout);
+}
+
+[layout="third"] .sidebar {
+    height: 100%;
+    background-color: white;
+}
+
+[layout="first"] .sidebar, [layout="second"] .sidebar, [layout="third"] .sidebar {
+    position: absolute;
+    z-index: 10;
+}
+
+[sidebar-status="hidden"] .sidebar {
+    width: 0%;
+    visibility: hidden;
+}
+
+[sidebar-status="shown"][layout="first"] .sidebar {
+    width: 15%;
+    visibility: visible;
+}
+
+[sidebar-status="shown"][layout="second"] .sidebar, [sidebar-status="shown"][layout="third"] .sidebar {
+    width: 15%;
+    visibility: visible;
+}
+
+[layout="fourth"] .sidebar {
+    visibility: visible;
+    background-color: var(--light);
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+[sidebar-status="hidden"][layout="fourth"] .sidebar {
+    width: 7%;
+}
+
+[sidebar-status="shown"][layout="fourth"] .sidebar {
+    width: 20%;
+}
+
+[layout="fourth"] .fourth-layout {
+    display: block !important;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    background-color: var(--theme-dark-background-layout);
+    top: 4%;
+    border-radius: 50%;
+    box-shadow: none !important;
+}
+
+[sidebar-status="hidden"][layout="fourth"] .fourth-layout {
+    left: 5.5%;
+}
+
+[sidebar-status="shown"][layout="fourth"] .fourth-layout {
+    left: 19%;
+}
+
+[layout="fourth"] .btn-link:hover {
+    color: white !important;
+}
+
+[layout="fourth"] .action-border-left {
+    border: none !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
 }
 
 .sidebar {

@@ -1,25 +1,13 @@
-[layout="first"] .sidebar, [layout="second"] .sidebar {
+[layout="first"] .homepage-container, 
+[layout="second"] .homepage-container, 
+[layout="third"] .homepage-container,
+[layout="fourth"] .homepage-container {
     position: absolute;
     z-index: 10;
-}
-
-[layout="first"] .homepage-container, [layout="second"] .homepage-container {
-    position: absolute;
-    z-index: 10;
-}
-
-[sidebar-status="hidden"] .sidebar {
-    width: 0%;
-    visibility: hidden;
 }
 
 [sidebar-status="hidden"] .homepage-container {
     width: 100%;
-}
-
-[sidebar-status="shown"][layout="first"] .sidebar {
-    width: 15%;
-    visibility: visible;
 }
 
 [sidebar-status="shown"][layout="first"] .homepage-container {
@@ -27,21 +15,37 @@
     width: 85%;
 }
 
-[sidebar-status="shown"][layout="second"] .sidebar {
-    width: 15%;
-    visibility: visible;
-}
-
-[sidebar-status="shown"][layout="second"] .homepage-container {
+[sidebar-status="shown"][layout="second"] .homepage-container,
+[sidebar-status="shown"][layout="third"] .homepage-container {
     left: 15%;
     top: 10%;
     width: 85%;
     height: 90%;
 }
 
-[sidebar-status="shown"][layout="second"] .custom-navbar {
+.background-color-layout-third {
+    display: none;
+}
+
+[layout="third"] .background-color-layout-third {
+    display: block;
+    background-color: var(--theme-dark-background-layout);
+    width: 100%;
+    height: 30%;
     position: absolute;
-    z-index: 10;
-    left: 15%;
-    width: 85%;
+    z-index: -1;
+}
+
+[sidebar-status="shown"][layout="third"] .background-color-layout-third {
+    height: 40%;
+}
+
+[sidebar-status="hidden"][layout="fourth"] .homepage-container {
+    left: 7%;
+    width: 93%;
+}
+
+[sidebar-status="shown"][layout="fourth"] .homepage-container {
+    left: 20%;
+    width: 80%;
 }
